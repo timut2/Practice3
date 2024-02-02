@@ -5,8 +5,8 @@ import (
 	"github.com/timut2/Practice3/pkg/handler"
 	"github.com/timut2/Practice3"
 	"github.com/spf13/viper"
-	"github.com/timu2/Practice3/repository"
-	"github.com/timu2/Practice3/service"
+	"github.com/timut2/Practice3/pkg/repository"
+	"github.com/timut2/Practice3/pkg/service"
 )
 func main(){
 	if err:= initConfig(); err!= nil{
