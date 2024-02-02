@@ -14,6 +14,6 @@ type Service struct{
 	Lists
 	Items
 }
-func NewService(repos repository.Repository) *Service {
+func NewService(repos *repository.Repository) *Service {
 	return &Service{}
 }
