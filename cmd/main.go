@@ -10,14 +10,14 @@ import (
 )
 func main(){
 	if err:= initConfig(); err!= nil{
-		log.Fatalf("error init config",err)
+		log.Fatalf("error initialization config",err)
 	}
 	repos:= repository.NewRepository()
 	services:=service.NewService(repos)
 	handlers:= new(services)
 	s:= new(server.Server)
 	if err:= s.Run(viper.GetString("port"), handlers.InitRoutes()); err!= nil{
-		log.Fatalf("error occured ",err)
+		log.Fatalf("error occured while running  http server",err)
 	}
 }
 
