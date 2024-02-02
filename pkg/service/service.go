@@ -1,5 +1,5 @@
 package service
-
+import "github.com/timut2/Practice3/pkg/repository"
 type Authorization interface{
 
 }

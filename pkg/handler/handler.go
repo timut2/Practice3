@@ -1,7 +1,8 @@
 package handler
 
-import "github.com/gin-gonic/gin"
-
+import ("github.com/gin-gonic/gin"
+"github.com/timut2/Practice3/pkg/service"
+)
 type Handler struct{
 	service *service.Service
 }

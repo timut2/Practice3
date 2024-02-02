@@ -14,7 +14,7 @@ func main(){
 	}
 	repos:= repository.NewRepository()
 	services:=service.NewService(repos)
-	handlers:= new(services)
+	handlers:= handler.(services)
 	s:= new(server.Server)
 	if err:= s.Run(viper.GetString("port"), handlers.InitRoutes()); err!= nil{
 		log.Fatalf("error occured while running  http server",err)
@@ -25,5 +25,5 @@ func main(){
 func initConfig() error {
 	viper.AddConfigPath("configs")
 	viper.SetConfigName("config")
-	return viper.ReadConfig()
+	return viper.ReadInConfig()
 }
